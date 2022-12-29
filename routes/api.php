@@ -57,6 +57,7 @@ Route::group(['prefix' => 'user', 'middleware' => ['auth:api']], function(){
 });
 ////////
 Route::group(['prefix' => 'reservation', 'middleware' => ['auth:api']], function(){
+    Route::get('/time', [ReservationController::class, 'time']);
     Route::get('/index', [ReservationController::class, 'index']);
     Route::post('/{id}', [ReservationController::class, 'store']);
     Route::get('/{id}', [ReservationController::class, 'show']);
