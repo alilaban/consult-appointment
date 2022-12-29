@@ -12,7 +12,6 @@ class Reservation extends Model
     protected $fillable =[
         'user_id',
         'expert_id',
-        'num_of_guests',//////
         'availabe_time',
     ];
 /**
